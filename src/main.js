@@ -1,7 +1,9 @@
 import Vue from 'vue'
-import App from './App.vue'
+import vue-image-preview from './vue-image-preview.vue'
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
+	
+	el: '#app',
+  	components: {}
+
 })
