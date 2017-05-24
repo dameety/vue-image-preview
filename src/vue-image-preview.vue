@@ -3,7 +3,11 @@
     <div class="vue-image-preview-container">
 
         <img class="vue-image-preview" :src=getSetImage v-if="getSetImage">
-        <input type="file" accept="image/*" :name=inputName @change="chooseImage">
+
+       	<button id="vue-image-preview-button">
+	        <input type="file" accept="image/*" :name=inputName @change="chooseImage">
+		    <span>Choose Image</span>
+		</button>
     
     </div>
 
@@ -79,7 +83,24 @@
 	.vue-image-preview {
 		height: 100%;
 		width: 100%;
-		margin-bottom: 10px;
+		margin-bottom: 5px;
+	}
+
+	#vue-image-preview-button {
+	    margin-top: 5px;
+	    position: relative;
+	    overflow: hidden;
+	    cursor: pointer;
+	}
+
+	#vue-image-preview-button input {
+	    cursor: pointer;
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    opacity: 0.001
 	}
 
 </style>
