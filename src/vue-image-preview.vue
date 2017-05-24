@@ -19,6 +19,7 @@
 		  		type: String,
 		  		default: "file",
 		  	},
+		  	
 		},
 
 		data () {
