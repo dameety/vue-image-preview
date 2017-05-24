@@ -4,7 +4,7 @@
 
         <img class="vue-image-preview" :src=getSetImage v-if="getSetImage">
 
-       	<button id="vue-image-preview-button">
+       	<button id="vue-image-preview-button" :style="[buttonStyle]">
 	        <input type="file" accept="image/*" :name=inputName @change="chooseImage">
 		    <span>Choose Image</span>
 		</button>
@@ -17,20 +17,34 @@
 	export default {
 
 		props: {
+			
 			defaultImage: {
 		  		type: String,
 		    	default: "",
 		  	},
+		  	
 		  	inputName: {
 		  		type: String,
 		  		default: "file",
 		  	},
+		  	
+		  	bgColor: {
+		  		default: "#037B38"
+		  	},
+
+		  	textColor: {
+		  		default: "#ffffff"
+		  	}
 		  	
 		},
 
 		data () {
 			return {
 				setImage: null,
+				buttonStyle: {
+					backgroundColor: this.bgColor,
+					color: this.textColor,
+				}
 			}   
 		},
 		
