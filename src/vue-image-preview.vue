@@ -1,8 +1,10 @@
 <template>
 	
-    <div class="image-container">
-        <img :src=getSetImage class="image">
+    <div class="vue-image-preview-container">
+
+        <img class="vue-image-preview" :src=getSetImage v-if="getSetImage">
         <input type="file" accept="image/*" :name=inputName @change="chooseImage">
+    
     </div>
 
 </template>
@@ -68,13 +70,16 @@
 </script>
 
 <style>
-	.image-container {
+	
+	.vue-image-preview-container {
 		height: 100%;
 		width: 100%;
 	}
 
-	.image {
+	.vue-image-preview {
 		height: 100%;
 		width: 100%;
+		margin-bottom: 10px;
 	}
+
 </style>
