@@ -1,4 +1,4 @@
-# Vue-image-preview
+# Vue-img-preview
 
  This is a minimal image preview implementation that does only one thing; give users feedback by showing image chosen from a file input.
 
@@ -15,46 +15,45 @@
 
 ```
 import Vue from 'vue'
-import vueImagePreview from './vue-image-preview.vue'
+import vueImgPreview from './vue-img-preview.vue'
 
 new Vue({
 	
 	el: '#app',
-  	components: {vueImagePreview}
+  	components: {vueImgPreview}
 
 })
-
 ```
 
-+## Browser Usage
+## Browser Usage
 
 ```
 <script src="path/to/vue/vue.min.js"></script>
-<script src="path/to/dist/vue-image-preview.js"></script>
+<script src="path/to/dist/vue-img-preview.js"></script>
 
 new Vue({
-  el: '#app',
-  components: {vueImagePreview}
-})
 
+  	el: '#app',
+	components: {vueImgPreview}
+
+})
 ```
 
  Then:
 
 ```
-<vue-image-preview
+<vue-img-preview
 	input-name= "imageName"
 	default-image= "https://placehold.it/350x150"
 	bg-color= "#ffffff"
 	text-color= "#000000"
-></vue-image-preview>
-
+></vue-img-preview>
 ```
 
 Or Just:
 
 ```
-<vue-image-preview></vue-image-preview>
+<vue-img-preview></vue-img-preview>
 
 ```
 
@@ -65,5 +64,17 @@ Or Just:
 | input-name | file |String| name of the file input field
 | default-image |  |String| an image to display when the component loads before the user cliks the file input
 | bg-color | #037B38 |String| background color of the select button
-| textColor | #ffffff | String| color of the select text
+| text-color | #ffffff | String| color of the select text
  
+
+## Dev  build 
+
+``` 
+npm run dev
+```
+
+## Production build
+
+```
+ npm run build
+```

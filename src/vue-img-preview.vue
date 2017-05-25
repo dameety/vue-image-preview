@@ -1,10 +1,10 @@
 <template>
 	
-    <div class="vue-image-preview-container">
+    <div class="vue-img-preview-container">
 
-        <img class="vue-image-preview" :src=getSetImage v-if="getSetImage">
+        <img class="vue-img-preview" :src=getSetImage v-if="getSetImage">
 
-       	<button id="vue-image-preview-button" :style="[buttonStyle]">
+       	<button id="vue-img-preview-button" :style="[buttonStyle]">
 	        <input type="file" accept="image/*" :name=inputName @change="chooseImage">
 		    <span>Choose Image</span>
 		</button>
@@ -60,7 +60,6 @@
 
 		},
 
-
 	    methods: {
 
 	        chooseImage (e) {
@@ -89,25 +88,25 @@
 
 <style>
 	
-	.vue-image-preview-container {
+	.vue-img-preview-container {
 		height: 100%;
 		width: 100%;
 	}
 
-	.vue-image-preview {
+	.vue-img-preview {
 		height: 100%;
 		width: 100%;
 		margin-bottom: 5px;
 	}
 
-	#vue-image-preview-button {
+	#vue-img-preview-button {
 	    margin-top: 5px;
 	    position: relative;
 	    overflow: hidden;
 	    cursor: pointer;
 	}
 
-	#vue-image-preview-button input {
+	#vue-img-preview-button input {
 	    cursor: pointer;
 	    position: absolute;
 	    top: 0;
