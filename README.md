@@ -11,11 +11,11 @@
 	npm install vue-img-preview
 ```
 
-## Usage
+## Import 
 
 ```
 import Vue from 'vue'
-import vueImgPreview from './vue-img-preview.vue'
+import {vueImgPreview} from 'vue-img-preview.vue'
 
 new Vue({
 	
@@ -28,15 +28,19 @@ new Vue({
 ## Browser Usage
 
 ```
-<script src="path/to/vue/vue.min.js"></script>
+<script src="path/to/vue/vue.js"></script>
 <script src="path/to/dist/vue-img-preview.js"></script>
 
-new Vue({
+<script>
 
-  	el: '#app',
-	components: {vueImgPreview}
+  Vue.component('vue-img-preview', vueImgPreview)
+  
+  const vm = new Vue({
+    ...
+  });
 
-})
+</script>
+
 ```
 
  Then:
@@ -65,16 +69,3 @@ Or Just:
 | default-image |  |String| an image to display when the component loads before the user clicks the file input
 | bg-color | #037B38 |String| background color of the select button
 | text-color | #ffffff | String| color of the select text
- 
-
-## Dev  build 
-
-``` 
-npm run dev
-```
-
-## Production build
-
-```
- npm run build
-```
