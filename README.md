@@ -8,7 +8,7 @@
 ## Installation
 
 ```
-
+	npm install vue-img-preview
 ```
 
 ## Usage
@@ -62,7 +62,7 @@ Or Just:
 | Name | Default | Type | Decsription |
 |------|:--------:|------|-------------|
 | input-name | file |String| name of the file input field
-| default-image |  |String| an image to display when the component loads before the user cliks the file input
+| default-image |  |String| an image to display when the component loads before the user clicks the file input
 | bg-color | #037B38 |String| background color of the select button
 | text-color | #ffffff | String| color of the select text
  
