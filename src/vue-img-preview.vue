@@ -2,11 +2,11 @@
 	
     <div class="vue-img-preview-container">
 
-        <img class="vue-img-preview" :src=getSetImage v-if="getSetImage">
+        <img class="vue-img-preview" :src=getSetImage :alt=altText v-if="getSetImage">
 
        	<button id="vue-img-preview-button" :style="[buttonStyle]">
 	        <input type="file" accept="image/*" :name=inputName @change="chooseImage">
-		    <span>Choose Image</span>
+		    <span>{{ buttonText }}</span>
 		</button>
     
     </div>
@@ -29,12 +29,25 @@
 		  	},
 		  	
 		  	bgColor: {
+		  		type: String,
 		  		default: "#037B38"
 		  	},
 
 		  	textColor: {
+		  		type: String,
 		  		default: "#ffffff"
+		  	},
+
+		  	altText: {
+		  		type: String,
+		  		default: "vue img preview"
+		  	},
+
+		  	buttonText: {
+		  		type: String,
+		  		default: "Choose an image"
 		  	}
+
 		  	
 		},
 
@@ -46,10 +59,6 @@
 					color: this.textColor,
 				}
 			}   
-		},
-		
-		mounted () {
-
 		},
 
 		computed: {
@@ -103,10 +112,11 @@
 	    margin-top: 5px;
 	    position: relative;
 	    overflow: hidden;
-	    cursor: pointer;
+
 	}
 
 	#vue-img-preview-button input {
+		width: 100%;
 	    cursor: pointer;
 	    position: absolute;
 	    top: 0;

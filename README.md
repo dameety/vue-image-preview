@@ -2,8 +2,6 @@
 
  This is a minimal image preview implementation that does only one thing; give users feedback by showing image chosen from a file input.
 
-#Installation
-
 
 ## Installation
 
@@ -43,18 +41,20 @@ new Vue({
 
 ```
 
- Then:
+## Then:
 
 ```
 <vue-img-preview
-	input-name= "imageName"
+	input-name= "profile_picture"
 	default-image= "https://placehold.it/350x150"
 	bg-color= "#ffffff"
 	text-color= "#000000"
+	alt-text="profile picture"
+    button-text="Choose image"
 ></vue-img-preview>
 ```
 
-Or Just:
+## Or Just:
 
 ```
 <vue-img-preview></vue-img-preview>
@@ -69,3 +69,5 @@ Or Just:
 | default-image |  |String| an image to display when the component loads before the user clicks the file input
 | bg-color | #037B38 |String| background color of the select button
 | text-color | #ffffff | String| color of the select text
+| alt-text | vue img preview | String| alternative text for the image
+| button-text | Choose an image | String| text to show on the button
