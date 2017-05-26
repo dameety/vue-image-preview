@@ -2,6 +2,10 @@
 
  This is a minimal image preview implementation that does only one thing; give users feedback by showing image chosen from a file input.
 
+## looks like this...
+
+![demo](https://cloud.githubusercontent.com/assets/10757330/26514483/148ab3b8-426a-11e7-8bd3-e40465e2509e.jpg)
+
 
 ## Installation
 
