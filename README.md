@@ -13,14 +13,14 @@
 	npm install vue-img-preview
 ```
 
-## Import 
+## Import
 
 ```
 import Vue from 'vue'
 import {vueImgPreview} from 'vue-img-preview.vue'
 
 new Vue({
-	
+
 	el: '#app',
   	components: {vueImgPreview}
 
@@ -36,7 +36,7 @@ new Vue({
 <script>
 
   Vue.component('vue-img-preview', vueImgPreview)
-  
+
   const vm = new Vue({
     ...
   });
@@ -49,12 +49,15 @@ new Vue({
 
 ```
 <vue-img-preview
+
 	input-name= "profile_picture"
 	default-image= "https://placehold.it/350x150"
 	bg-color= "#ffffff"
 	text-color= "#000000"
 	alt-text="profile picture"
     button-text="Choose image"
+    picker-style="button"
+
 ></vue-img-preview>
 ```
 
@@ -75,3 +78,4 @@ new Vue({
 | text-color | #ffffff | String| color of the select text
 | alt-text | vue img preview | String| alternative text for the image
 | button-text | Choose an image | String| text to show on the button
+| picker-style | regular | String | how the image picker should be displayed.
