@@ -1,33 +1,37 @@
 <template>
-	
+
     <div class="vue-img-preview-container">
 
         <img class="vue-img-preview" :src=getSetImage :alt=altText v-if="getSetImage">
 
-       	<button id="vue-img-preview-button" :style="[buttonStyle]">
+       	<button id="vue-img-preview-button" :style="[buttonStyle]" v-if="pickerStyle !== 'regular'">
 	        <input type="file" accept="image/*" :name=inputName @change="chooseImage">
 		    <span>{{ buttonText }}</span>
 		</button>
-    
+
+		<div id="vue-img-preview-regular" v-if="pickerStyle === 'regular'">
+	        <input type="file" accept="image/*" :name=inputName @change="chooseImage">
+        </div>
+
     </div>
 
 </template>
-    
+
 <script>
 	export default {
 
 		props: {
-			
+
 			defaultImage: {
 		  		type: String,
 		    	default: "",
 		  	},
-		  	
+
 		  	inputName: {
 		  		type: String,
 		  		default: "file",
 		  	},
-		  	
+
 		  	bgColor: {
 		  		type: String,
 		  		default: "#037B38"
@@ -46,9 +50,13 @@
 		  	buttonText: {
 		  		type: String,
 		  		default: "Choose an image"
+		  	},
+
+		  	pickerStyle: {
+		  		type: String,
+		  		default: "regular"
 		  	}
 
-		  	
 		},
 
 		data () {
@@ -58,7 +66,7 @@
 					backgroundColor: this.bgColor,
 					color: this.textColor,
 				}
-			}   
+			}
 		},
 
 		computed: {
@@ -89,19 +97,26 @@
 
 	        },
 
-
 	    },
 
 	}
 </script>
 
 <style>
-	
+
+	/**
+	 * the container div for
+	 * the whole plugin template
+	 */
 	.vue-img-preview-container {
 		height: 100%;
 		width: 100%;
 	}
 
+	/**
+	 * the class target the
+	 * preview image
+	 */
 	.vue-img-preview {
 		height: 100%;
 		width: 100%;
@@ -124,6 +139,30 @@
 	    left: 0;
 	    right: 0;
 	    opacity: 0.001
+	}
+
+	/**
+	 * the normal file picker input
+	 * setting border and color
+	 */
+	#vue-img-preview-regular {
+
+		border-style: solid;
+		border-color: #cccccc;
+		border-width: 1px;
+
+	}
+
+	/**
+	 * the normal file picker input
+	 * setting the margins
+	 */
+	#vue-img-preview-regular input {
+
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 10px;
+
 	}
 
 </style>

@@ -2,3 +2,5 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+index.html
+/dist/vue.min.js
