@@ -1,7 +1,7 @@
 {
   "name": "vue-img-preview",
   "description": "An image input preview component",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "main": "dist/vue-img-preview.js",
   "author": "Dameety <djdamilola01@gmail.com>",
   "License": "MIT",

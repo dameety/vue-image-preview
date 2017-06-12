@@ -17,14 +17,10 @@
 
 ```
 import Vue from 'vue'
-import {vueImgPreview} from 'vue-img-preview.vue'
+import {vueImgPreview} from 'vue-img-preview'
 
-new Vue({
+Vue.component('vue-img-preview', vueImgPreview)
 
-	el: '#app',
-  	components: {vueImgPreview}
-
-})
 ```
 
 ## Browser Usage
