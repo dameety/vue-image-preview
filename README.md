@@ -10,7 +10,7 @@
 ## Installation
 
 ```
-	npm install vue-img-preview
+	npm install vue-img-preview --save
 ```
 
 ## Import
@@ -52,7 +52,7 @@ Vue.component('vue-img-preview', vueImgPreview)
 	text-color= "#000000"
 	alt-text="profile picture"
     button-text="Choose image"
-    picker-style="button"
+    picker-style="regular"
 
 ></vue-img-preview>
 ```
@@ -74,4 +74,4 @@ Vue.component('vue-img-preview', vueImgPreview)
 | text-color | #ffffff | String| color of the select text
 | alt-text | vue img preview | String| alternative text for the image
 | button-text | Choose an image | String| text to show on the button
-| picker-style | regular | String | how the image picker should be displayed.
+| picker-style | Regular | String | how the image picker should be displayed. Button-text, text-color & bg-color won't work with this.

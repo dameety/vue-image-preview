@@ -9,8 +9,8 @@
 		    <span>{{ buttonText }}</span>
 		</button>
 
-		<div id="vue-img-preview-regular" v-if="pickerStyle === 'regular'">
-	        <input type="file" accept="image/*" :name=inputName @change="chooseImage">
+		<div class="form-group" v-if="pickerStyle === 'regular'">
+	        <input type="file" accept="image/*" class="form-control" :name=inputName @change="chooseImage">
         </div>
 
     </div>
@@ -103,6 +103,8 @@
 </script>
 
 <style>
+
+	@import url(https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css);
 
 	/**
 	 * the container div for
