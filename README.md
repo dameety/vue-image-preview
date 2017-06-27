@@ -1,4 +1,4 @@
-# Vue-img-preview [![npm version](https://badge.fury.io/js/vue-img-preview.svg)](https://badge.fury.io/js/vue-img-preview) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dameety/vue-image-preview/master/License)
+# Vue-img-preview [![npm version](https://badge.fury.io/js/vue-img-preview.svg)](https://badge.fury.io/js/vue-img-preview) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dameety/vue-image-preview/master/License) [![NPM](https://nodei.co/npm/vue-img-preview.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-img-preview/)
 
  This is a minimal image preview implementation that does only one thing; give users feedback by showing image chosen from a file input.
 
