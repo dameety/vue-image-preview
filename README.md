@@ -1,4 +1,4 @@
-# Vue-img-preview
+# Vue-img-preview [![npm version](https://badge.fury.io/js/vue-img-preview.svg)](https://badge.fury.io/js/vue-img-preview)
 
  This is a minimal image preview implementation that does only one thing; give users feedback by showing image chosen from a file input.
 
